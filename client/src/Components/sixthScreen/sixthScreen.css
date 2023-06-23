@@ -1,0 +1,130 @@
+
+.guests-carousel-container {
+    height: 100svh;
+    width: 100svw;
+    font-size: 25px;
+    background-color: hsl( 0, 0%, 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.guests-outside-carousel-container{
+    position: relative;
+    width: 100svw;
+    height: 85svh;
+    overflow: auto;
+}
+
+.guests-carousel{
+    display: flex;
+    height: 90%;
+    width: max-content;
+    transition: transform 0.5s ease;
+    gap:4rem;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0 2rem;
+}
+
+.guests-cards {
+    height: 90%;
+    width: 20rem;
+    background-position: center center;
+    background-size: cover ;
+    border-radius: 20px;    
+    background-color: hsl(120, 26%, 96%);
+    display: flex;
+    align-items: center;
+    text-align: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    box-shadow: 0 10px 10px hsl( 0, 0%, 0%);
+    color: hsl(0, 100%,0%);
+    position: relative;
+}
+
+.guest-image{
+    width:13rem;
+    height:13rem;
+    margin: 1.5rem 0; 
+    border-radius:50%;
+    box-shadow: 0 5px 5px hsl(0, 100%,0%);
+}
+
+.guests-title {
+    text-align: center;
+    height: 15svh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center ;
+    font-size: 2rem;
+    color: hsl( 0, 0%, 35%);
+}
+
+.guests-card-title {
+    margin-bottom: 10%;
+    width: 100%;
+    background-color: hsl(120, 26%, 96%);
+    position: absolute;
+    top: 50%;
+    height:50%;
+    width: 100%;
+    text-transform: capitalize;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    font-size: 1.10rem;
+}
+
+.guests-upper-title {
+    text-transform: uppercase;
+    font-size: 2.35rem;
+    margin-bottom: 3svh;
+    color: hsl(0, 0%, 12.5%)
+}
+
+.guests-lower-title {
+    text-transform: capitalize;
+    font-size: 1.35rem;
+    color: hsl(0, 0%, 25%);
+}
+
+.guests-card-title-comment {
+    margin-top:2.5rem;
+    padding: 1rem;
+}
+
+@media screen and (max-width:500px) {
+    .guests-carousel {
+    justify-content: flex-start;
+    font-size: 20px;
+    }
+    .guests-card-title {
+        height: 50%;        
+    }
+    .guests-cards{
+        height: 45%;
+    }
+}
+
+@media screen and (max-width:900px) {
+    .guests-carousel {
+        justify-content: flex-start;
+        }
+    .guests-card-title {
+        height: 50%;
+    }
+    .guests-cards{
+        height: 45%;
+    }
+}
+
+/* @media screen and (max-width:1100px) {
+    .guests-cards {
+        height: 45svh;
+    }
+} */
+

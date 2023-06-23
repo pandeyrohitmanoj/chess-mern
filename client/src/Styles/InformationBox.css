@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Public+Sans:wght@700&display=swap');
+.infoBox {
+    max-width: 65%;
+    height: max-content;
+    margin: 1rem auto;
+    display: flex;
+    font-size: clamp(1.5rem, 1.5rem, 1.75rem);
+    align-items: center;
+    background-color: hsl( 0, 50%, 100%);
+    border-radius: 2rem;
+    flex:wrap;
+    justify-content: flex-end;    
+}
+
+@media screen and (min-width:1100px) {
+    .infoBox {
+        margin:10svh auto 0 auto ;
+    } 
+    .lower-box{
+        align-items: center;
+    }
+}
+
+.infoBox > *{
+    padding: 1.25rem;
+    border-right: 1.25px solid hsl( 0,50%, 0%);
+    min-width:33%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.infoBox > :last-child{
+    border:none;
+}
+
+.address {
+    width: 42.5%;
+}
+
+.startToEndDate {
+    width: 42.5%;
+}
+
+.button {    
+    width: max-content;
+    background-color: hsla(120, 50%, 50%);
+    border-top-right-radius: 2rem;
+    border-bottom-right-radius: 2rem;
+    text-align: center;
+    cursor: pointer;
+}
+
+.infoBox-address-box {
+    cursor: pointer;
+    
+}
+
+.infoBox-address-box-allCity-cities{
+    cursor: pointer;
+    font-size: 1.1rem;
+}
+
+.infoBox-address-box-allCity-cities:hover {
+    background-color: hsl(200,80%, 60%);
+    color: hsl( 0, 0%, 100%);
+}
+
+.infoBox-address-box-allCity {
+    position: absolute;
+    left: 20%;
+    bottom:25%;
+    background-color: hsl( 0, 0%, 100%);
+    max-height: 50svh;
+    overflow: auto;
+    border-radius: 15px;
+    padding: 2svh 3svh ;
+}
+
+.infoBox-address-box-allCity>*{
+    padding: 2svh 2.5svw;
+    border-bottom: 1px solid hsl( 0,50%, 0%);
+}
+.lower-box{
+    height: 45svh;
+    width: 100svw;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.lower-box>*{    
+    flex:1;
+}
+
+@media screen and (max-width:800px){
+    .infoBox { 
+        flex-direction: column;
+    }
+    .infoBox > * {
+        border-radius: 0;
+        width:100%;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+        border-bottom: 1px solid hsl( 0,50%, 0%);
+        display: flex;  
+        justify-content: center;
+        align-items: center;
+        min-width: max-content;
+    }
+    .infoBox>:last-child{
+        border-bottom-left-radius: 2rem;
+        border-bottom-right-radius: 2rem;
+    }
+    .infoBox-address-box-allCity {
+        left:28%;
+        bottom: 50%;
+        height: 200px;
+    }
+}
+

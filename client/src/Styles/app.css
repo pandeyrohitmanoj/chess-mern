@@ -1,0 +1,20 @@
+
+.App {
+    overflow:hidden;
+}
+
+.scroll-content {
+    height: 100svh;
+    scroll-behavior: smooth;
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+}
+
+.scroll-content>* {
+    scroll-snap-align: start;
+}
+
+::-webkit-scrollbar {
+    width: 0;
+  }
+

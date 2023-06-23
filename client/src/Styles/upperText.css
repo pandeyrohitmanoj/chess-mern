@@ -1,0 +1,36 @@
+
+.upperTextbox {
+    background-color: hsla( 0, 0%, 15%, 70%);
+    color: hsl(0, 0%, 100%);
+    font-size: clamp( 2.75rem, 2.9rem, 5rem);
+    padding: 2rem 0.5rem;
+    max-width: 70%;
+    min-height: 14rem;
+    margin: 15svh auto 0 auto;
+    text-align: center;
+}
+.upperTitle{
+    margin: 0 0 1.75rem 0;
+}
+.lowerTitle{
+    font-size: 1.75rem;
+}
+
+@media screen and (max-width: 600px) {
+    .upperTextbox{
+        max-height: 50svh;  
+        max-width:40svh;
+        margin: 12.5svh auto;
+        align-items: center;  
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width:1100px) {
+    .upperTextbox {
+        max-width: 60svh;
+        margin: 10svh auto;
+    }
+}

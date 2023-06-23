@@ -1,0 +1,36 @@
+.cards{
+    display:flex;
+    gap:1.5rem;
+    height: 90svh;    
+    width: 80svw;
+    margin: 5svh 10svw;
+    flex-wrap:wrap;
+    overflow: auto;
+}
+
+.card{
+    height: 55svh;
+    width: 25svw;
+    border: 1px solid blue;
+    border-radius: 30px;
+}
+@media screen and (max-width:850px) {
+    .cards{
+        justify-content: flex-start;
+        gap:2rem 3rem;
+    }
+    .card {
+        width: 36svw;
+    }
+}
+@media screen and (max-width:600px) {
+    .cards{
+        justify-content: center;
+    }
+    .card {
+        width: 70svw;
+    }
+}
+.moreCard {
+    cursor: pointer;
+}
