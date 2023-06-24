@@ -10,6 +10,8 @@ const { carsRouter, } = require('./routes/cars/cars.route')
 const { countryRouter, } = require('./routes/countries/country.route')
 const { cityRouter, } = require('./routes/cities/cities.route')
 
+const PORT = process.env.PORT || 8000
+
 const staticPagePath = path.join(__dirname,'..','build')
 
 const { MONGO_URI } = require('./keys')
@@ -47,7 +49,7 @@ async function startServer () {
         useNewUrlParser: true, 
     })
     
-    app.listen( 8000, ( ) => {
+    app.listen( PORT, ( ) => {
         console.log('server has started')
     })
 }
