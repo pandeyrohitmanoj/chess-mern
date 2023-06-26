@@ -1,5 +1,5 @@
 import axios from 'axios'
- const domain = "https://car-rental-eight-delta.vercel.app/api"
+ const domain = "https://car-rental-mern-app.vercel.app/api"
 
 // const domain = "http://localhost:8000/api"
 

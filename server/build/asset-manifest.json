@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.7cba4ecc.css",
-    "main.js": "/static/js/main.b393fb10.js",
+    "main.css": "/static/css/main.dd1ea335.css",
+    "main.js": "/static/js/main.0e044c43.js",
     "static/css/185.72133b46.chunk.css": "/static/css/185.72133b46.chunk.css",
     "static/js/185.652d2c58.chunk.js": "/static/js/185.652d2c58.chunk.js",
     "static/css/134.8b41389e.chunk.css": "/static/css/134.8b41389e.chunk.css",
@@ -29,14 +29,14 @@
     "static/media/1.jpg": "/static/media/1.68f0bbb5ee0311447ffb.jpg",
     "static/media/2.png": "/static/media/2.f5466db024ff40461701.png",
     "static/media/2.jpg": "/static/media/2.ddf1640b5e4f043b7b96.jpg",
-    "static/media/login.svg": "/static/media/login.fb65fcc43b8bededb813.svg",
+    "static/media/login.svg": "/static/media/login.a6a8cfdd43ef57630419.svg",
     "static/media/All.svg": "/static/media/All.609446c7a9901f64db02d1cc4b56948f.svg",
     "index.html": "/index.html",
     "static/media/diesel.svg": "/static/media/diesel.2e4a9a8598cea82028391dfab94f1d35.svg",
     "static/media/Petrol.svg": "/static/media/Petrol.ac66fe7cae8bc25c5602c3d3aa3edaec.svg",
     "static/media/electric.svg": "/static/media/electric.d38f83531e44ecb3335c9879c9beea48.svg",
-    "main.7cba4ecc.css.map": "/static/css/main.7cba4ecc.css.map",
-    "main.b393fb10.js.map": "/static/js/main.b393fb10.js.map",
+    "main.dd1ea335.css.map": "/static/css/main.dd1ea335.css.map",
+    "main.0e044c43.js.map": "/static/js/main.0e044c43.js.map",
     "185.72133b46.chunk.css.map": "/static/css/185.72133b46.chunk.css.map",
     "185.652d2c58.chunk.js.map": "/static/js/185.652d2c58.chunk.js.map",
     "134.8b41389e.chunk.css.map": "/static/css/134.8b41389e.chunk.css.map",
@@ -58,7 +58,7 @@
     "58.276877f0.chunk.js.map": "/static/js/58.276877f0.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.7cba4ecc.css",
-    "static/js/main.b393fb10.js"
+    "static/css/main.dd1ea335.css",
+    "static/js/main.0e044c43.js"
   ]
 }
