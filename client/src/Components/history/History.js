@@ -27,7 +27,7 @@ export default function History({emailId}) {
           const dates = card.datesAvailability.split(",")
           let from = String(new Date(dates[0])).split(" ")
           let to = String(new Date(dates[1])).split(" ")//`url(${card.imageURI})`
-          console.log(from,to)
+          
           return ( 
           <div className='navigation-history-card' key={key} >
             <div className='navigation-history-card-car-image' style={{ backgroundImage: `url(${card.imageURI})` }} ></div> 

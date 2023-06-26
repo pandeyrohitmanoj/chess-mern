@@ -54,13 +54,13 @@ function LoginForm( {registered, setRegistered, setSelectedOneCity, setSelectedC
   
   useEffect( () => {
     async function ifUserIsAuthenticated(){
-      console.log(userEmail, userPassword)
+      //console.log(userEmail, userPassword)
       if(userEmail && userPassword){
         const response = await getAuthenticateProfile(userEmail,userPassword)
         const {correctPassword, userExist, country, city, phone, userName} = response
         // console.log(correctPassword, userExist, country, city, phone, email, userName)
         if( correctPassword && userExist){
-      console.log(userEmail ,userPassword)
+      //console.log(userEmail ,userPassword)
 
           setRegistered(true)
           setSelectedOneCity(city)

@@ -32,11 +32,11 @@ app.get('/',(req,res)=>{
     res.sendFile(staticPagePath)
 })
 
-app.use( '/signup', signupRouter)
-app.use( '/login', loginRouter )
-app.use( '/savecar', carsRouter)
-app.use( '/country', countryRouter)
-app.use( '/cities', cityRouter )
+app.use( '/api/signup', signupRouter)
+app.use( '/api/login', loginRouter )
+app.use( '/api/savecar', carsRouter)
+app.use( '/api/country', countryRouter)
+app.use( '/api/cities', cityRouter )
 
 
 

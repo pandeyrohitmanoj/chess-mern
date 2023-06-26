@@ -1,0 +1,33 @@
+{
+  "Warehouse LocationID": 100006833,
+  "WipOrderNo": ["20562891"],
+  "WipOrderType": [1],
+  "OprSequenceNo": ["0161"],
+  "ResourceName": ["100000424"],
+  "ResourceType": [6],
+  "WipOprDetID": [10458162],
+  "Container": "LUREAPPOUT3",
+  "QAInspectorAllowMessage": "",
+  "Parameters": ["00000002", "00000002", "00000002"],
+  "ValidateEmployee": "",
+  "InputScanSerialNo": "",
+  "ScanAllow": 0,
+  "TransactionCode": "POE"
+}
+
+{
+    "WarehouseLocationID":100006249,
+    "WipOrder No": ["20392643"], 
+    "WipOrderType" : [1], 
+    "OprSequenceNo":["0120"],
+    "ResourceName": ["100000486"], 
+    "ResourceType": [6], 
+    "WipOprDetID":[10453277], 
+    "Container":"LUVEAS7W500", 
+    "QAInspectorAllowMessage": "", 
+    "Parameters":["00000001","00000001","00000001"], 
+    "ValidateEmployee":"", 
+    "InputScanSerialNo":"",
+    "ScanAllow":0,
+    "TransactionCode":"POE"
+}
