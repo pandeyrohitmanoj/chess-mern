@@ -1,6 +1,6 @@
 import axios from 'axios'
  const domain = "https://car-rental-mern-app.vercel.app/api"
-
+// const domain = 'https://car-rental-cflmifmq6-pandeyrohitmanoj.vercel.app/api'
 // const domain = "http://localhost:8000/api"
 
 async function getCarsData(pageNo,type,cityName) {
