@@ -49,6 +49,7 @@ async function postProfileForSignUp(userName, email, password, country, city, ph
 }
 
 async function getAuthenticateProfile( email, password,){
+    console.log(domain)
     const response = await axios.post(`${domain}/login`,{  email, userpassword:password,}).then( response => response.data)
     return response
 }
