@@ -42,6 +42,7 @@ app.use( '/api/cities', cityRouter )
 
 
 app.get('*',(req,res)=>{
+    console.log("backend is working")
     res.redirect('/')
 })
 
