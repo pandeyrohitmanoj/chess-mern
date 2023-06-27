@@ -1,0 +1,136 @@
+ .sidebar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 25svw;
+    height: 100vh;
+    background-color: #fff;
+    z-index: 1000;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    display: none;
+    overflow: hidden;
+  }
+  
+  .sidebar-open {
+    transform: translateX(0);
+    display: block;
+  }
+ 
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+    display: none;
+  }
+   
+  .sidebar-open ~ .overlay {
+    display: block;
+  }
+  
+  .open-button {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 1001;
+  }
+  
+  .profile-info {
+    position: relative;
+    padding: 20px;
+    background-color: #000;
+    color: #fff;
+    max-width: 100%;
+    display: flex;
+    min-height: 20svh;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+  
+  .full-name {
+    font-size: 20px;
+    font-weight: bold;
+    max-width: 100%;
+    margin-bottom: 10px;
+  }
+  
+  .email,
+  .phone-number {
+    font-size: 14px;
+    color: #999;
+    margin-bottom: 5px;
+  }
+  
+  .menu-items {
+    padding: 20px;
+  }
+  
+  .menu-items ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .menu-items ul li {
+    font-size: 14px;
+    color: #999;
+    margin-bottom: 10px;
+  }
+  
+  .logout-button {
+    padding: 8px 16px;
+    background-color: #000;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 14px;
+    cursor: pointer;
+  }
+  
+  .logout-button:hover {
+    background-color: #333;
+  } 
+
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 35%;
+    height: 100vh;
+    background-color: #fff;
+    z-index: 1000;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .sidebar-open {
+    transform: translateX(0);
+  } 
+  .sidebar-exit-button {
+    position: absolute;
+    top:18%;
+    right:10%;
+    height: 1.75rem;
+    width: 1.75rem;
+    border-radius: 50%;
+    font-size: 1.2rem;
+    background-color: hsl( 0 , 0%, 95%);
+    cursor: pointer;
+    color: hsl( 0 , 0%, 15%);
+  }
+  .sidebar-country-dropbox {
+    min-width:50%;
+    padding: 2.5px 0;    
+  }
+
+  .menu-items li>*:not(select){
+    text-decoration: none;
+    color: hsl( 0 , 0%, 55%);
+  }

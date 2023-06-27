@@ -1,0 +1,32 @@
+
+.calendar-box {
+    position: absolute ; 
+    top:  23%  ; 
+    right: 25%  ; 
+    z-index: 1 ; 
+    display:  flex ;
+    height:300px;
+    width:60svw;
+    overflow:auto;
+}
+
+.input {
+    border: 0;
+    font-size: 1.1rem;
+    cursor: pointer;
+}
+
+@media screen and (max-width:900px) {
+    .calendar-box {
+        position: absolute ; 
+        top: 16%  ; 
+        left: auto;
+        z-index: 1 ; 
+        display: flex;
+        flex-direction: column;
+        background-color: aqua ;
+        height:300px;
+        width:50svw;
+        overflow:auto;
+    }
+}

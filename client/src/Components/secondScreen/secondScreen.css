@@ -1,0 +1,11 @@
+
+.secondScreen {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: baseline;
+    height: 100svh;
+    width: 100%;
+    background-color: hsl(0,0%, 95%);
+}

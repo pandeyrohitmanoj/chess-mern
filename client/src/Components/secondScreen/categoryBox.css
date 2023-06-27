@@ -1,0 +1,9 @@
+
+.category-box {
+    position: absolute;
+    top:2svh;
+    left:10svw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

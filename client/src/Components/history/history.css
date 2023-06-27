@@ -1,0 +1,92 @@
+
+.navigation-history{
+    height: 100svh;
+    width:100svw;
+}
+
+.navigation-history-title {
+    height: 10svh;
+    width: 100svw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    color: hsl( 0, 0%, 100%);
+    background-color: hsl( 0, 0%, 0%);
+    padding: auto;
+}
+
+.navigation-history-cards{
+    height: 85svh;
+    width: 98svw;
+    padding: 5svh 0;
+    display: flex;
+    overflow-y: auto;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 0 auto;
+}
+
+.navigation-history-card {
+    min-height: 50svh;
+    border-radius: 20px;
+    border: 1px solid hsl(200, 50%, 50%);
+    width: 20svw;
+    margin: 4svh 2svh;
+}
+
+@media screen and (max-width:900px) {
+    .navigation-history-card {
+        width: 42svw;
+    }
+}
+
+@media screen and (max-width:600px) {
+    .navigation-history-card {
+        width: 40svw;
+    }
+}
+
+@media screen and (max-width:400px) {
+    .navigation-history-card {
+        width: 80svw;
+    }
+}
+
+.navigation-history-card-car-image {
+    height: 70%;
+    border-radius: 18px;
+    border-top: 1px solid hsl(200, 50%, 50%);
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.navigation-history-card-dates, .navigation-history-card-carName {
+    margin: 2svh 3svh;
+}
+
+.navigation-history-backButton {
+    position: absolute;
+    bottom:10%;
+    right: 5%;
+    border-radius: 10px;
+    box-sizing:content-box;
+    height: 3rem;
+    width: 6rem;
+}
+.navigation-history-backButton-title {
+    background-color: hsl( 130, 50%, 50%);
+    padding: 1rem 1.5rem;
+    border-radius: 20px;
+}
+.navigation-history-backButton-title:hover {
+    border: 2px solid hsl( 0, 0%, 0%);
+}
+.navigation-history-backButton *{
+    color: hsl( 0, 0%, 100%) ;
+    font-size: 1.5rem;
+    text-decoration: none;
+}

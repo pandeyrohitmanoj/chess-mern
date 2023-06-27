@@ -1,0 +1,13 @@
+
+{
+    "username":"rohit", 
+    "email":"rohit@gmail.com", 
+    "userpassword":"rohit@9832"
+}
+
+
+{
+    "username":"rohit1", 
+    "email":"rohit1@gmail.com", 
+    "userpassword":"rohit@9833"
+}

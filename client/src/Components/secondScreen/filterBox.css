@@ -1,0 +1,62 @@
+
+.filterBox {
+    position: absolute;
+    top: 15%;
+    left: 1rem;
+    display: block;
+    width: max-content; 
+    max-height: 100svh;   
+}
+
+
+.icon {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;  
+    margin:1rem; 
+    margin-bottom: 5svh;
+    cursor: pointer;
+    filter: drop-shadow(5px 10px 4px hsl(0,0%,100%));
+}
+
+.icon, .icon * { 
+    font-size: 1rem;
+}
+
+.selected {
+    fill:hsl(120,50%,70%);
+    stroke:"current";
+}
+
+.icon:has(.selected){
+    border: 2px solid hsl(120,50%,70%);
+    border-radius: 15px;
+    padding:5px 0;
+}
+
+div.icon:has(.selected){
+    color: hsl(120,50%,70%);
+
+}
+
+.icons{
+    fill: hsl(120,50%,40%); 
+}
+
+.Icons {
+    height: 2.5rem;
+    width: 2.5rem;
+    stroke-width: 2px;
+}
+
+@media screen and ( max-width:1100px) {
+    html {
+        font-size: 12px;
+    }
+}
+@media screen and (max-width: 600px) {
+    html {
+        font-size: 10px;
+    }
+}

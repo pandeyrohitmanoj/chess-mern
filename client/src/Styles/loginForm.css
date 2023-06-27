@@ -1,0 +1,14 @@
+
+.loginComponent{
+    height: 100svh;
+    width: 100%;
+}
+
+.firstPage {
+    height: 100svh;
+    width: 100%;
+    background-image: url('../Styles/car.jpg'); 
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}

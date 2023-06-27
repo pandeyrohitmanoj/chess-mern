@@ -1,0 +1,27 @@
+
+.thirdScreen {
+    min-height: 100svh;
+    display: flex;
+    justify-content: center;
+    background-image: url('../../Styles/1.jpg');
+    background-position: center center;
+    background-size: cover;
+}
+
+.pageText {
+    height: fit-content;
+    margin: 10svh;
+    text-align: center;
+    background-color: hsla( 0, 0%, 15%, 70%);
+    color: hsl(0, 0%, 100%);
+    font-size: clamp( 1.25rem, 1.5rem, 2rem);
+    line-height: 1.25;
+    padding: 1.25rem 0.25rem;
+    min-width: 75%;
+    padding-bottom: 3svh;
+}
+
+.title{
+    font-size: 3.15rem;
+    margin-bottom: 2.5svh;
+}

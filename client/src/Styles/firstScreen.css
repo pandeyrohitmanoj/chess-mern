@@ -1,0 +1,8 @@
+
+.upperComponent {
+    position:relative;
+    height:100svh;
+    background-image: url('../Styles/car.jpg');
+    background-position:  center center;
+    background-size:cover;  
+}

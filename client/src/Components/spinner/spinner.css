@@ -1,0 +1,47 @@
+
+.spinner {
+    height: 100svh;
+    width: 100svw;
+    position: absolute;
+    top:0;
+    left:0;
+    background-color: hsla(0, 0%, 75%, 75% );
+    z-index: 2000;
+}
+@keyframes spinner {
+  to {transform: rotate(360deg);}
+}
+ 
+.loaded {
+  box-sizing: border-box;
+  position: relative;
+  top: 45%;
+  left: 45%;
+  width: 100px;
+  height: 100px;
+  margin-top: -10px;
+  margin-left: -10px;
+  border-radius: 50%;
+  border: 10px solid hsl(0, 0%, 75%);
+  border-top-color: #000;
+  animation: spinner .6s linear infinite;
+}
+.spinner-text{
+  position: absolute;
+  top: 45%;
+  left: 45%;
+  transform: translate(-50%,-50%);
+  width: 40svw;
+  height: 50svh;
+  background-color: hsl(0, 0%, 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-end;
+  padding: 0.5rem 1.5rem;
+  text-align: left;
+}
+.spinner-text-button{
+  height: 50px;
+  width: 100px;
+}

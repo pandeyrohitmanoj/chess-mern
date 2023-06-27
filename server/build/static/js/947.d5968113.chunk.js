@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkclient=self.webpackChunkclient||[]).push([[947],{1947:function(e,n,s){s.r(n),s.d(n,{default:function(){return c}});s(2791);var r=s(184);function c(){return(0,r.jsx)("div",{className:"fourthScreen",children:(0,r.jsxs)("div",{className:"pageText",children:[(0,r.jsx)("div",{className:"title",children:"Drive Worry Free with Zoomcar!"}),"24X7 Roadside assistance whenever you need"]})})}}}]);
+//# sourceMappingURL=947.d5968113.chunk.js.map

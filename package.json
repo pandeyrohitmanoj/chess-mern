@@ -1,0 +1,26 @@
+{
+  "name": "chess-mern",
+  "version": "1.0.0",
+  "description": "",
+  "main": "zindex.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "server": "npm run cluster --prefix server",
+    "client": "npm run build --prefix client",
+    "build":"npm i --prefix client && npm i --prefix server && npm run build --prefix client",
+    "start": "npm run cluster --prefix server",
+    "deploy":"npm run deploy-cluster ",
+    "deploy-stop": "cd server & pm2 stop src/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pandeyrohitmanoj/chess-mern.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pandeyrohitmanoj/chess-mern/issues"
+  },
+  "homepage": "https://github.com/pandeyrohitmanoj/chess-mern#readme"
+}

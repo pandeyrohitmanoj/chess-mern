@@ -1,0 +1,57 @@
+
+.city-names-screen {
+    height: max-content;
+    width: 100svw;
+    font-size: 1.5rem;
+    background-color: hsl(0, 0%, 35%);
+    color: hsl(0,0%, 90%);
+}
+
+.city-names-title {
+    height: 20svh;
+    width: 100svw;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0 3svh 0 5svh ;
+    margin-bottom: 5svh;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    line-height: 1.5;
+    border-bottom:  2px solid hsl(0, 0%, 100%);
+}
+
+.city-names-screen-element {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 0 5svh;
+    letter-spacing: 1.25px;
+    gap: 1rem;
+}
+
+
+.city-names-screen-element-countryName {
+    font-size: 1.25rem;
+    padding: 1rem 0 0.5rem 0;
+    color: hsl(0,0%, 100%);
+    border-bottom: 1px solid hsl(0,0%, 100%);
+}
+
+.city-names-screen-element-cityName {
+    height: max-content;
+    width: 100%;
+    font-size: 1.15rem;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.city {
+    width: 20ch;
+    padding: 5svh 1.5svw;
+    text-align: left;
+}
+
+.social-media-screen {
+
+}
