@@ -7,9 +7,9 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "server": "npm run cluster --prefix server",
     "client": "npm run build --prefix client",
-    "build":"npm i --prefix client && npm i --prefix server && npm run build --prefix client",
     "start": "npm run cluster --prefix server",
     "deploy":"npm run deploy-cluster ",
+    "build":"npm i --prefix client && npm i --prefix server && npm run build --prefix client && npm star",
     "deploy-stop": "cd server & pm2 stop src/server.js"
   },
   "repository": {
