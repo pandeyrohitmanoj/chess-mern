@@ -1,5 +1,6 @@
 import axios from 'axios'
- const domain = "https://chess-mern.vercel.app/api"
+ const domain = "https://car-rental-mern-app.vercel.app/api"
+ 
 // const domain = 'https://car-rental-cflmifmq6-pandeyrohitmanoj.vercel.app/api'
 // const domain = "https://localhost:8000/api"
 
