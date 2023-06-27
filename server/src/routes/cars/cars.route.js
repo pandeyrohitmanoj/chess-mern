@@ -28,7 +28,7 @@ const upload = multer( { storage } )
 
 carsRouter.post( '/getCars', httpGetCars)
 
-carsRouter.post( '/db',httpGetAllData )
+carsRouter.get( '/db',httpGetAllData )
 
 carsRouter.post( '/bookcar', httpPostUpdateDatesAvailable )
 
