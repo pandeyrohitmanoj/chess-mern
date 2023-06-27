@@ -11,7 +11,7 @@ const { carsRouter, } = require('./routes/cars/cars.route')
 const { countryRouter, } = require('./routes/countries/country.route')
 const { cityRouter, } = require('./routes/cities/cities.route')
 
-const PORT = process.env.PORT || 8000
+const PORT = 8000
 
 const staticPagePath = path.join(__dirname,'..','build')
 
