@@ -76,7 +76,7 @@ const Card = ({ imageURI, make, type, datesAvailability, pricePerHour, selectedF
 
   return (
     <div className="card" style={{ display: ((type==selectedFuelType || selectedFuelType=='All') && end > startAvailable && endAvailable > start ) ? '' : 'none'}}>
-      <img src={fetchImage(imageURI)} alt="Google Drive Image" />
+      <img src={imageURI} alt="Google Drive Image" />
       <h2 className="card-title">{make}</h2>
       <h3 className="card-subtitle">{type}</h3>
       <div className="card-divider"></div>
