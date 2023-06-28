@@ -6,7 +6,7 @@ import cc from 'currency-codes'
 
 import {CityNameContext} from '../../App'
 
-import {postBookCar,postHistory,postfindImageData,} from '../requests'
+import {postBookCar,postHistory,} from '../requests'
 
 import './card.css'
 import Spinners from '../spinner/Spinners';
@@ -66,7 +66,7 @@ const Card = ({ imageURI, make, type, datesAvailability, pricePerHour, selectedF
 
   return (
     <div className="card" style={{ display: ((type==selectedFuelType || selectedFuelType=='All') && end > startAvailable && endAvailable > start ) ? '' : 'none'}}>
-      <img className="card-image" src={postfindImageData(imageURI)} alt="Car" />
+      <img className="card-image" src={imageURI} alt="Car" />
       <h2 className="card-title">{make}</h2>
       <h3 className="card-subtitle">{type}</h3>
       <div className="card-divider"></div>
