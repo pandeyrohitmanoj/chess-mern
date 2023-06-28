@@ -39,6 +39,25 @@ app.use( '/api/savecar', carsRouter)
 app.use( '/api/country', countryRouter)
 app.use( '/api/cities', cityRouter )
 
+app.get('/api/image', async (req, res) => {
+    const {imageURI} = req.body;
+  
+    try {
+      const response = await axios.get(imageURI, {
+        responseType: 'arraybuffer',
+        headers: {
+          'Content-Type': 'image/jpeg', // Set the appropriate Content-Type based on the image type
+        },
+      });
+  
+      const imageBuffer = Buffer.from(response.data, 'binary');
+      res.send(imageBuffer);
+    } catch (error) {
+      console.error('Error fetching image:', error);
+      res.status(500).json({ message: 'Error fetching image' });
+    }
+  });
+
 app.get('/',(req,res)=>{
     res.sendFile(staticPagePath)
 })

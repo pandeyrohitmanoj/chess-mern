@@ -79,6 +79,16 @@ async function postfindImageData(driveurl) {
      return response
 }
 
+async function axiosgetImage( imageURI){
+    const response = await axios.get( imageURI, {
+        'Access-Control-Allow-Credentials' : true,
+        'Access-Control-Allow-Origin':'*',
+        'Access-Control-Allow-Methods':'GET',
+      }, ).then( response => response.data )
+
+      return response
+}
+
 export {
     getCarsData,
     getAllCountryAndCitiesName,
@@ -90,4 +100,5 @@ export {
     postHistory,
     getHistoryData,
     postfindImageData,
+    axiosgetImage,
 }
