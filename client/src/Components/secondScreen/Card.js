@@ -57,6 +57,7 @@ const Card = ({ imageURI, make, type, datesAvailability, pricePerHour, selectedF
       console.log(error.message)
     }
   }
+  console.log(imageURI)
 
   return (
     <div className="card" style={{ display: ((type==selectedFuelType || selectedFuelType=='All') && end > startAvailable && endAvailable > start ) ? '' : 'none'}}>

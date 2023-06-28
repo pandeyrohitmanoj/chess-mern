@@ -29,9 +29,7 @@ mongoose.connection.on( 'error', (err) => {
     console.error(err)
 })
 
-app.get('/',(req,res)=>{
-    res.sendFile(staticPagePath)
-})
+
 
 app.use( '/api/signup', signupRouter)
 app.use( '/api/login', loginRouter )
@@ -39,7 +37,9 @@ app.use( '/api/savecar', carsRouter)
 app.use( '/api/country', countryRouter)
 app.use( '/api/cities', cityRouter )
 
-
+app.get('/',(req,res)=>{
+    res.sendFile(staticPagePath)
+})
 
 app.get('*',(req,res)=>{
     console.log("backend is working")

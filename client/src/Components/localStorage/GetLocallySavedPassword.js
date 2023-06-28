@@ -14,7 +14,7 @@ const usePassword = () => {
   }, [])
 
   const setPasswordAndStore = (newEmail,newPassword) => {
-    console.log(newEmail, " ", newPassword)
+    //console.log(newEmail, " ", newPassword)
     localStorage.setItem('email', newEmail )
     localStorage.setItem('password', newPassword)
     setUserEmail(newEmail)

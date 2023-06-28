@@ -40,7 +40,7 @@ function RouteComponent() {
                     {/* <Route path='/app' element={<App register />} /> */}
                     <Route path='/app' element={ registered ? <App {...register} /> : <SignUp {...register} />}  />
                     <Route path='/history' element={ registered ? <History emailId={emailId} /> : <SignUp {...register} />}/>
-                    <Route path='*' element={<SignUp {...register} />} />
+                    <Route path='/*' element={<SignUp {...register} />} />
             </Routes>
                 </Suspense>
     )
