@@ -1,6 +1,5 @@
 import React, { useState, useContext, useEffect} from 'react';
 import SetLoadBookCarMessage from '../spinner/SpinnersBookCar';
-import axios from 'axios'
 
 import getSymbolFromCurrency from 'currency-symbol-map'
 import cc from 'currency-codes'
@@ -58,25 +57,16 @@ const Card = ({ imageURI, make, type, datesAvailability, pricePerHour, selectedF
       console.log(error.message)
     }
   }
-  
-  const [imageSrc, setImageSrc] = useState('');
+  // console.log(imageURI)
 
-    const fetchImage = async (imageURI) => {
-      try {
-        const response = await axios('https://chess-mern-uqn4.vercel.app/api/image',{imageURI});
-        const imageBlob = await response.blob();
-        const objectURL = URL.createObjectURL(imageBlob);
-        return objectURL
-      } catch (error) {
-        console.error('Error fetching image:', error);
-      }
-    };
-
-
+  // const getImage = async (imageURI) => {
+  //   const response = await postfindImageData(imageURI)
+  //   return response
+  // }
 
   return (
     <div className="card" style={{ display: ((type==selectedFuelType || selectedFuelType=='All') && end > startAvailable && endAvailable > start ) ? '' : 'none'}}>
-      <img src={imageURI} alt="Google Drive Image" />
+      <img className="card-image" src={imageURI} alt="Car" />
       <h2 className="card-title">{make}</h2>
       <h3 className="card-subtitle">{type}</h3>
       <div className="card-divider"></div>
