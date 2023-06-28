@@ -69,6 +69,16 @@ async function getHistoryData( email ){
     return response
 }
 
+async function postfindImageData(driveurl) {
+    const response = await axios.post( `${domain}/images`, { imageURI:driveurl } ).then( res => { 
+        if(!res.ok) {
+            throw new Error('Image Request failed')
+        }
+        return res.blob()
+     } )
+     return response
+}
+
 export {
     getCarsData,
     getAllCountryAndCitiesName,
@@ -79,4 +89,5 @@ export {
     postBookCar,
     postHistory,
     getHistoryData,
+    postfindImageData,
 }

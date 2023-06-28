@@ -62,36 +62,43 @@ async function postCarImage( file) {
   throw new Error(`You got an error while car.model while finding imageLinks:${error.message}`)
  }
 }
+const folderId = '1RGEXHf5PmohFC4PoX2_miK-o4T8pcDHM'; 
 
 
 
-// async function httpPostCarData(){
-//   try{
-//     const date ='2023-06-01,2023-12-31'
-//     await carsDb.updateMany( { }, {$set:{ datesAvailability: date }},{upsert:false} )
-//     return true
-//   }catch(error) {
-//     console.error(`You got error in cars.model: ${error.message}`)
-//   }
-//   return
-// }
-
-async function httpPostCarData( carData,file){
+async function httpPostCarData(){
   try{
-    const userName = carData.ownerName
-    const response = await carsDb.findOne({ ownerName: userName })
-    if(response != null ){
-      return {ok:"user already exist"}
+    const imageURL = await getImageLinksInFolder()
+    const images = Object.values(imageURL)
+    const cars = await carsDb.find( {}, { _id:1} )
+    for( let i=0; i<cars.length;i++){
+      console.log(images[i])
+      // const folder = `https://drive.google.com/uc?id=${folderId}&export=download&${encodeURIComponent(images[i])}`
+      await carsDb.updateOne( {_id:cars[i]["_id"]},{ $set: { imageURI : images[i]}} )
     }
-    carData["imageURI"] = await postCarImage(file)
-    const dbResponse = await carsDb.updateOne({},carData,{upsert:true})
-    
-    return await dbResponse.modifiedCount
+    return true
   }catch(error) {
-    console.error(`Ypu got error in cars.model: ${error.message}`)
+    console.error(`You got error in cars.model: ${error.message}`)
   }
   return
 }
+
+// async function httpPostCarData( carData,file){
+//   try{
+//     const userName = carData.ownerName
+//     const response = await carsDb.findOne({ ownerName: userName })
+//     if(response != null ){
+//       return {ok:"user already exist"}
+//     }
+//     carData["imageURI"] = await postCarImage(file)
+//     const dbResponse = await carsDb.updateOne({},carData,{upsert:true})
+    
+//     return await dbResponse.modifiedCount
+//   }catch(error) {
+//     console.error(`Ypu got error in cars.model: ${error.message}`)
+//   }
+//   return
+// }
 
 /*
 {"_id":{"$oid":"64690005bf321ae722717238"},

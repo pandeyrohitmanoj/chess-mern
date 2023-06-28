@@ -15,52 +15,52 @@ async function httpGetCars( req, res) {
     }
 }
 
-async function httpPostCarsDb(req,res) {  
-    const {
-            make,
-            ownerName,
-            carPrice,
-            pricePerHour,
-            datesAvailable,
-            type,
-            country,
-            cityName,
-          } = req.body
-    try {
-        const data = {
-            make,
-            ownerName,
-            carPrice,
-            pricePerHour,
-            datesAvailable,
-            type,
-            country,
-            cityName,
-        }
-        const file = req.file
-
-        const response = await httpPostCarData(data,file)
-        
-        res.status(200).send(response)
-        // console.log(response)
-        // await httpPostCarImage(file)
-        // console.log(file)
-    }catch(error) {
-        console.error( `Error in controller: ${error.message}`)
-    }
-    return
-}
-
 // async function httpPostCarsDb(req,res) {  
+//     const {
+//             make,
+//             ownerName,
+//             carPrice,
+//             pricePerHour,
+//             datesAvailable,
+//             type,
+//             country,
+//             cityName,
+//           } = req.body
+//     try {
+//         const data = {
+//             make,
+//             ownerName,
+//             carPrice,
+//             pricePerHour,
+//             datesAvailable,
+//             type,
+//             country,
+//             cityName,
+//         }
+//         const file = req.file
 
-//     try{    
-//         const response = await httpPostCarData()        
+//         const response = await httpPostCarData(data,file)
+        
 //         res.status(200).send(response)
+//         // console.log(response)
+//         // await httpPostCarImage(file)
+//         // console.log(file)
 //     }catch(error) {
 //         console.error( `Error in controller: ${error.message}`)
 //     }
 //     return
-//     }
+// }
+
+async function httpPostCarsDb(req,res) {  
+
+    try{    
+        await httpPostCarData()        
+        res.status(200).send("yup")
+    }catch(error) {
+        console.error( `Error in controller: ${error.message}`)
+    }
+    return
+    }
     
 
 async function httpGetAllData(req,res) {

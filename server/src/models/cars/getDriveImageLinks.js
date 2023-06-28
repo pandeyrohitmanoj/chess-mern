@@ -20,7 +20,7 @@ const findGdriveList = async ( ) => {
     q: `'${folderId}' in parents and mimeType contains 'image/' and trashed=false`,
     fields: 'files(name, webViewLink)',
    });
-   return response.data
+   return response.data.files
 }
 
 async function getImageLinksInFolder() {
@@ -42,7 +42,7 @@ async function getImageLinksInFolder() {
   } else {
    console.log('No image files found in the folder.');
   }
-//   console.log(imageLinks)
+  // console.log(imageLinks)
   return imageLinks
  } catch (error) {
   console.error('Error retrieving folder contents:', error);
