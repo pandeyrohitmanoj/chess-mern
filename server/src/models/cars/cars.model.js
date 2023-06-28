@@ -1,7 +1,7 @@
 const carsDb = require('./cars.mongo')
 const  fileType = import('file-type')
 
-const { getImageLinksInFolder, postImageInGDriveFolder} = require("./getDriveImageLinks.js")
+const { getImageLinksInFolder, postImageInGDriveFolder, getBlobs} = require("./getDriveImageLinks.js")
 
 const itemPerPage = 8;
 
@@ -68,17 +68,18 @@ const folderId = '1RGEXHf5PmohFC4PoX2_miK-o4T8pcDHM';
 
 async function httpPostCarData(){
   try{
-    const imageURL = await getImageLinksInFolder()
-    const images = Object.values(imageURL)
+    const imageBlobs = await getBlobs()
+    console.log(imageBlobs)
+    // const images = Object.values(imageURL)
     const cars = await carsDb.find( {}, { _id:1} )
-    for( let i=0; i<cars.length;i++){
+    for( let i=0; i<imageBlobs.length;i++){
       console.log(images[i])
       // const folder = `https://drive.google.com/uc?id=${folderId}&export=download&${encodeURIComponent(images[i])}`
-      await carsDb.updateOne( {_id:cars[i]["_id"]},{ $set: { imageURI : images[i]}} )
+      await carsDb.updateOne( {_id:cars[40+i]["_id"]},{ $set: { imageURI : imageBlobs[i]}} )
     }
     return true
   }catch(error) {
-    console.error(`You got error in cars.model: ${error.message}`)
+    console.error(`You got error in cars.model: ${error}`)
   }
   return
 }

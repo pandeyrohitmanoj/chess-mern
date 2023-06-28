@@ -39,35 +39,11 @@ app.use( '/api/savecar', carsRouter)
 app.use( '/api/country', countryRouter)
 app.use( '/api/cities', cityRouter )
 
-app.post('/api/images', async (req, res) => {
-    const { imageURI,} = req.body
-//   console.log(imageURI)
-    try {
-  
-      const driveUrl = imageURI;
-  
-      // Make a request to the Drive link
-      const response = await axios.get(driveUrl, { responseType: 'arraybuffer' });
-
-      const imageBuffer = response.data;
-  
-      // Set the appropriate headers for the image response
-      res.setHeader('Content-Type', response.headers['content-type']);
-      res.setHeader('Content-Length', response.headers['content-length']);
-  
-      // Send the image buffer as the response
-      res.send(imageBuffer);
-    } catch (error) {
-      console.error('Error retrieving image:',error);
-      res.sendStatus(500);
-    }
-  });
-
 app.get('/',(req,res)=>{
     res.sendFile(staticPagePath)
 })
 
-app.get('*',(req,res)=>{
+app.get('/*',(req,res)=>{
     console.log("backend is working")
     res.redirect('/')
 })

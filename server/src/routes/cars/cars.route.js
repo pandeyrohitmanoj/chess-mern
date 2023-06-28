@@ -35,7 +35,7 @@ carsRouter.post( '/bookcar', httpPostUpdateDatesAvailable )
 
 // carsRouter.post('/', upload.single('carImage') , httpPostCarsDb)
 
-carsRouter.get('/', httpPostCarsDb)
+// carsRouter.get('/', httpPostCarsDb)
 
 
 module.exports = {

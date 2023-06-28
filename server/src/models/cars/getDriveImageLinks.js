@@ -15,24 +15,53 @@ const drive = google.drive({ version: 'v3', auth })
 
 const folderId = '1RGEXHf5PmohFC4PoX2_miK-o4T8pcDHM'; 
 
-const findGdriveList = async ( ) => {
+const findGdriveList = async () => {
   const response = await drive.files.list({
     q: `'${folderId}' in parents and mimeType contains 'image/' and trashed=false`,
-    fields: 'files(name, webViewLink)',
+    fields: ' files(name, webViewLink, id, mimeType)',
+    pageSize:50,
    });
    return response.data.files
 }
 
+async function getBlobs(){
+  const images = [];
+
+    const response = await findGdriveList()
+    const files = response;
+    if (files && files.length > 0) {
+      for (const file of files) {
+        const imageResponse = await drive.files.get(
+          { fileId: file.id, alt: 'media' },
+          { responseType: 'arraybuffer' }
+        );
+        const imageData = Buffer.from(imageResponse.data, 'binary');
+        const imageBlob = new Blob([imageData], { type: file.mimeType });
+
+        images.push(imageBlob);
+      }
+    }
+
+  
+
+  return images;
+}
+
 async function getImageLinksInFolder() {
  const imageLinks = {} 
-
+ const imageBlobs = []
+const nextPageToken=null
  try {
   const imageFiles = await findGdriveList()
 
   if (imageFiles.length) {
 //    console.log('Image files in the folder:');
 
-   imageFiles.forEach(file => {
+   imageFiles.forEach(async function(file){
+    const imageResponse = await drive.files.get( { fileId:file.id,alt:'media'} )
+    const imageData = Buffer.from(imageResponse.data,'binary')
+    const imageBlob = new Blob([imageData], { type: file.mimeType} )
+    imageBlobs.push(imageBlob)
     const temp = {}
     const name = new String(file.name).replace(/.jpg/,'')
     temp[name] = file.webViewLink
@@ -43,7 +72,8 @@ async function getImageLinksInFolder() {
    console.log('No image files found in the folder.');
   }
   // console.log(imageLinks)
-  return imageLinks
+  // return imageLinks
+  return imageBlobs
  } catch (error) {
   console.error('Error retrieving folder contents:', error);
  }
@@ -84,5 +114,6 @@ async function postImageInGDriveFolder(file) {
 module.exports = {
     getImageLinksInFolder,
     postImageInGDriveFolder,
+    getBlobs,
 }
 
