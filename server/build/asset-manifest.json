@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/static/css/main.dd1ea335.css",
+    "main.css": "/static/css/main.89f5a55d.css",
     "main.js": "/static/js/main.643b3e01.js",
     "static/css/185.d9fd8ef1.chunk.css": "/static/css/185.d9fd8ef1.chunk.css",
     "static/js/185.652d2c58.chunk.js": "/static/js/185.652d2c58.chunk.js",
@@ -36,7 +36,7 @@
     "static/media/diesel.svg": "/static/media/diesel.2e4a9a8598cea82028391dfab94f1d35.svg",
     "static/media/Petrol.svg": "/static/media/Petrol.ac66fe7cae8bc25c5602c3d3aa3edaec.svg",
     "static/media/electric.svg": "/static/media/electric.d38f83531e44ecb3335c9879c9beea48.svg",
-    "main.dd1ea335.css.map": "/static/css/main.dd1ea335.css.map",
+    "main.89f5a55d.css.map": "/static/css/main.89f5a55d.css.map",
     "main.643b3e01.js.map": "/static/js/main.643b3e01.js.map",
     "185.d9fd8ef1.chunk.css.map": "/static/css/185.d9fd8ef1.chunk.css.map",
     "185.652d2c58.chunk.js.map": "/static/js/185.652d2c58.chunk.js.map",
@@ -59,7 +59,7 @@
     "58.276877f0.chunk.js.map": "/static/js/58.276877f0.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.dd1ea335.css",
+    "static/css/main.89f5a55d.css",
     "static/js/main.643b3e01.js"
   ]
 }
