@@ -16,13 +16,6 @@ import { getAnalytics } from "firebase/analytics";
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-  apiKey: "AIzaSyCprWQ1vVYi97R_RZ4TZnoBdtWq92BbIkQ",
-  authDomain: "car-rental-mern.firebaseapp.com",
-  projectId: "car-rental-mern",
-  storageBucket: "car-rental-mern.appspot.com",
-  messagingSenderId: "314781834838",
-  appId: "1:314781834838:web:1f1c9ea7018d1d2c3d25f7",
-  measurementId: "G-HB7Z1BVTE1"
 };
 
 // Initialize Firebase
